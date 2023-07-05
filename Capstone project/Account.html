@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PawZone - Account</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .h2 {
+            font-family: 'segoe ui', sans-serif;
+            font-size: 30px;
+            color: #000;
+            text-align: center;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        div {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            padding: 5px;
+        }
+
+        button[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #003366;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #001f4d;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="headerdiv">
+            <div class="divlogo">
+                <img class="logo" src="./images/Logo.jpg" alt="Your Website Name">
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="Home page.html">Home</a></li>
+                    <li><a href="Aboutus.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="contactus.html">Contact</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="Account.html">Account</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h2>Account Information</h2>
+        <form method="POST" action="<?php echo $_SERVER["PHP_SELF"]: ?>">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 PawZone. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

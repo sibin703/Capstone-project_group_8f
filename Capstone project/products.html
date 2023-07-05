@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Products</title>
+    <style>
+        .product-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            height: 600px;
+            gap: 15px;
+            margin-bottom: 100px;
+        }
+
+        .product-card {
+            width: 400px;
+            height: 590px;
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .buttonWrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10vh;
+
+        }
+
+        .button {
+            display: inline-block;
+            font-size: 1.5em;
+            padding: 10px 20px;
+            color: #000;
+            border: #000;
+            border-radius: 15px;
+            background: transparent;
+            text-align: center;
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+            text-decoration: none;
+            margin: 5px 2px;
+            outline: 3px solid #000;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+            color: #fff;
+            background: #000;
+        }
+
+        .p {
+            font-family: 'segoe ui', sans-serif;
+            font-size: 17px;
+            color: #333;
+            line-height: 1.6;
+            margin: 0 0 1em;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-left: 3px solid #feb47b;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: left;
+
+
+        }
+
+        .img {
+            height: 300px;
+            width: 200px;
+        }
+
+        .h2 {
+            font-family: 'segoe ui', sans-serif;
+            font-size: 30px;
+            color: #000;
+            text-align: center;
+
+        }
+
+        .line {
+            height: 0.7px;
+            width: 1000px;
+            background-color: #000;
+            margin-top: 30px;
+            margin-bottom: 30px;
+
+        }
+
+        .linecentralize {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .h1 {
+            font-family: 'segoe ui', sans-serif;
+            font-size: 45px;
+            color: #ff0000;
+            text-align: center;
+
+        }
+
+        .personalizediv {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: center;
+            margin: 10px;
+
+        }
+
+        .personalizeimg {
+            width: 1150px;
+            height: 730px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .h3 {
+            font-family: 'segoe ui', sans-serif;
+            font-size: 50px;
+            color: #000;
+            text-align: center;
+        }
+
+        .dim-image {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dim-image img {
+            display: block;
+            width: 100%;
+        }
+
+        .dim-image .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 50px;
+            font-weight: bolder;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .dim-image::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .product-container2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            height: 600px;
+            gap: 15px;
+            margin-bottom: 100px;
+        }
+
+        .product-card2 {
+            width: 470px;
+            height: 530px;
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+        }
+
+        .p2 {
+            font-family: 'segoe ui', sans-serif;
+            font-size: 25px;
+            color: #333;
+            line-height: 1.6;
+            margin: 0 0 1em;
+            padding: 10px;
+            text-align: center;
+
+        }
+
+        .logo {
+            top: 10px;
+            left: 10px;
+            height: 60px;
+        }
+
+        nav {
+
+            height: 60px;
+            color: #fff;
+            width: 70%;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 20;
+            margin: 0;
+            height: 100%;
+            align-items: center;
+        }
+
+        .nav-links li {
+            margin: 0 20px;
+        }
+
+        .nav-links a {
+            color: #000000;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .nav-links a:hover {
+            color: #ce1e1e;
+        }
+        .headerdiv{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="headerdiv">
+<div class="divlogo">
+        <img class="logo" src="./images/Logo.jpg" alt="Your Website Name">
+        </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="Home page.html">Home</a></li>
+            <li><a href="Aboutus.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="contactus.html">Contact</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="Account.html">Account</a></li>
+        </ul>
+    </nav>
+
+</div>
+
+    <h3 class="h3">PAW ZONE PRODUCTS</h3>
+    <div class="linecentralize">
+        <div class="line">
+
+        </div>
+    </div>
+    <h1 class="h1"> Pet Food</h1>
+    <div class="product-container">
+        <div class="product-card">
+            <img class="img" src="./images/Pet food 1.jpeg" alt="Product 1">
+            <h2 class="h2">Dry Dog Food</h2>
+            <p class="p">
+                Our dry dog food is an all-natural, nutritionally balanced kibble,
+                rich in lean protein and essential nutrients for your dog's health</p>
+            <div class="buttonWrapper">
+                <button class="button">See more ⟶</button>
+            </div>
+
+        </div>
+
+        <div class="product-card">
+            <img class="img" src="./images/Petfood2.jpeg" alt="Product 2">
+            <h2 class="h2">Pet Food</h2>
+            <p class="p">Our pet food is a high-quality, balanced blend, fortified
+                with essential nutrients to promote your pet's overall health.</p>
+            <div class="buttonWrapper">
+                <button class="button">See more ⟶</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img class="img" src="./images/Pet food 3.png" alt="Product 3">
+            <h2 class="h2">Dry Pet Food</h2>
+            <p class="p">Our dry pet food is a balanced, nutrient-rich kibble made
+                from quality ingredients for your pet's optimal health.</p>
+            <div class="buttonWrapper">
+                <button class="button">See more ⟶</button>
+            </div>
+        </div>
+    </div>
+    <div class="linecentralize">
+        <div class="line">
+
+        </div>
+    </div>
+
+    <!--Pet Toys-->
+    <h1 class="h1"> Pet Toys</h1>
+    <div class="product-container">
+        <div class="product-card">
+            <img class="img" src="./images/Pet toy 1.jpg" alt="Product 1">
+            <h2 class="h2">Bouncy Ball</h2>
+            <p class="p">
+                Our bouncy ball is a vibrant, high-bouncing toy
+                designed for endless fun and active play.</p>
+            <div class="buttonWrapper">
+                <button class="button">See more ⟶</button>
+            </div>
+
+        </div>
+
+        <div class="product-card">
+            <img class="img" src="./images/Pet toy 2.webp" alt="Product 2">
+            <h2 class="h2">Rubber Pet Toy</h2>
+            <p class="p">Our rubber pet toy is a durable, flexible choice for interactive play,
+                perfect for your pet's enjoyment and dental health.</p>
+            <div class="buttonWrapper">
+                <button class="button">See more ⟶</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img class="img" src="./images/Pet toy 3.webp" alt="Product 3">
+            <h2 class="h2">Chew Toy</h2>
+            <p class="p">Our dog chew toy is a durable, fun, and teeth-friendly option
+                for your pet's playtime and dental health.</p>
+            <div class="buttonWrapper">
+                <button class="button">See more ⟶</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="linecentralize">
+        <div class="line">
+
+        </div>
+    </div>
+    <!--Personalize your pet-->
+    <h1 class="h1"> Personalize Your Pets</h1>
+    <div class="personalizediv">
+        <img class="personalizeimg" src="./images/Personalize your pets.jpg" alt="Product 1">
+    </div>
+    <div class="buttonWrapper">
+        <button class="button">See more ⟶</button>
+    </div>
+
+    <div class="linecentralize">
+        <div class="line">
+
+        </div>
+    </div>
+
+    <!--Birthday Special Deals-->
+    <h1 class="h1"> Birthday Special Deals</h1>
+    <p class="p2"> Want to enjoy our pet birthday deals? Simply follow the link and fill out a short form</p>
+    <div class="product-container2">
+        <div class="product-card2">
+            <div class="dim-image">
+                <img src="./images/Birthday reward 1.jpeg" alt="description of image">
+                <div class="overlay-text">50% off</div>
+            </div>
+            <h2 class="h2">Pet Food</h2>
+            <div class="buttonWrapper">
+                <button class="button">See more ⟶</button>
+            </div>
+        </div>
+
+        <div class="product-card2">
+            <div class="dim-image">
+                <img src="./images/Birthday reward 2.jpeg" alt="description of image">
+                <div class="overlay-text">25% off</div>
+            </div>
+            <h2 class="h2">Pet Toys</h2>
+            <div class="buttonWrapper">
+                <button class="button">See more ⟶</button>
+            </div>
+        </div>
+
+        <div class="product-card2">
+            <div class="dim-image">
+                <img src="./images/Birthday reward 3.jpeg" alt="description of image">
+                <div class="overlay-text">FREE</div>
+            </div>
+            <h2 class="h2">Pet Pharmacy</h2>
+            <div class="buttonWrapper">
+                <button class="button">See more ⟶</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

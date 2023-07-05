@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - PawZone</title>
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <div class="headerdiv">
+    <div class="divlogo">
+            <img class="logo" src="./images/Logo.jpg" alt="Your Website Name">
+            </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="Home page.html">Home</a></li>
+                <li><a href="Aboutus.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="Account.html">Account</a></li>
+            </ul>
+        </nav>
+    
+    </div>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Feel free to reach out to us with any questions, concerns, or feedback. We are here to assist you!</p>
+    
+    <div class="contact-info">
+        <address>
+            546 Karn Street<br>
+            Ontario, Waterloo, N2B 2G1<br>
+            Canada
+          </address>
+      
+      <h3>Email</h3>
+      <p><a href="mailto:info@petzone.com">info@petzone.com</a></p>
+      
+      <h3>Phone</h3>
+      <p><a href="tel:+15467898789">+1 (546) 789-8789</a></p>
+    </div>
+    
+    <div class="contact-form">
+      <h3>Send us a Message</h3>
+      <form action="submit_contact_form.php" method="POST">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+  
+  <footer>
+    <p>&copy; 2023 PetZone. All rights reserved.</p>
+  </footer>
+</body>
+</html>
